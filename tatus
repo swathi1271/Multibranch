@@ -1,0 +1,25 @@
+[1mdiff --git a/Jenkinsfile b/Jenkinsfile[m
+[1mindex ceb362b..7713ad7 100644[m
+[1m--- a/Jenkinsfile[m
+[1m+++ b/Jenkinsfile[m
+[36m@@ -15,20 +15,4 @@[m [msh 'mvn package'[m
+ [m
+ }[m
+ [m
+[31m-stage('Continuous Deployment') [m
+[31m-[m
+[31m-{[m
+[31m-[m
+[31m-sh 'scp  /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.44.187:/var/lib/tomcat9/webapps/qaenv.war'[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-stage('Continuous testing') [m
+[31m-[m
+[31m-{[m
+[31m-[m
+[31m-sh 'echo "Testing Passed"'[m
+[31m-[m
+[31m-}[m
+[31m-[m
+ }[m
